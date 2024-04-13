@@ -13,6 +13,11 @@
 
 ### Step 2. App.tsx
 
+yarn add @react-navigation/native
+yarn add react-native-screens react-native-safe-area-context
+yarn add @react-navigation/native-stack
+yarn add @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons
+yarn add @react-native-masked-view/masked-view
 ```
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
