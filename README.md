@@ -1,4 +1,4 @@
-# Deep Linking in React Native.
+# Deep Linking In React Native.
 
 ### Step 1. android/app/src/main/AndroidManifest.xml
 
