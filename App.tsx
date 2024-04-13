@@ -26,149 +26,149 @@ const ProfileStack = createNativeStackNavigator();
 const SettingsStack = createNativeStackNavigator();
 
 const linking = {
-prefixes: [ 'demoapp://'],
-config: {
-      screens: {
-            HomeScreen: 'homescreen',
-            FavouriteScreen: 'favscreen',
-            ProfileScreen: {
-              screens: {
-                Profile: {
-                   path: 'profilescreen/:user/',
-              },
-            },
+  prefixes: ['demoapp://'],
+  config: {
+    screens: {
+      HomeScreen: 'homescreen',
+      FavouriteScreen: 'favscreen',
+      ProfileScreen: {
+        screens: {
+          Profile: {
+            path: 'profilescreen/:user/',
           },
-            SettingsScreen: 'settingsscreen',
-},
-},
+        },
+      },
+      SettingsScreen: 'settingsscreen',
+    },
+  },
 };
 
 const App = () => (
- <NavigationContainer linking={linking}>
-<Tab.Navigator
-initialRouteName="Home"
-activeColor="#fff"
-headerShown={true}
-screenOptions = {{ 
-   headerStyle: {
-     backgroundColor: '#009387',
-   },
-   headerTintColor: '#fff',
-   headerTitleStyle: {
-     fontWeight: 'bold',
-   },
-  }}
->
+  <NavigationContainer linking={linking}>
+    <Tab.Navigator
+      initialRouteName="Home"
+      activeColor="#fff"
+      headerShown={true}
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#009387',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}
+    >
 
-<Tab.Screen
-  name="HomeScreen"
-  component={HomeStackScreen}
-  options={{
-    title: 'Home',
-    tabBarLabel: 'Home',
-    tabBarColor: '#009387',
-    tabBarIcon: ({ color }) => (
-      <Image style={styles.image} source={{
-        uri: 'https://logos.flamingtext.com/City-Logos/Todo-Logo.png',
-      }} />
-    ),
-  }}
-/>
-<Tab.Screen
-  name="FavouriteScreen"
-  component={FavStackScreen}
-  options={{
-    tabBarLabel: 'Favourite',
-    tabBarColor: '#009387',
-    tabBarIcon: ({ color }) => (
-      <Image style={styles.image} source={{
-        uri: 'https://logos.flamingtext.com/City-Logos/Todo-Logo.png',
-      }} />
-    ),
-  }}
-/>
-<Tab.Screen
-  name="ProfileScreen"
-  component={ProfileStackScreen}
-  options={{
-    tabBarLabel: 'Profile',
-    tabBarColor: '#009387',
-    tabBarIcon: ({ color }) => (
-      <Image style={styles.image} source={{
-        uri: 'https://logos.flamingtext.com/City-Logos/Todo-Logo.png',
-      }}/>
-    ),
-  }}
-/>
-<Tab.Screen
-  name="SettingsScreen"
-  component={SettingsStackScreen}
-  options={{
-    tabBarLabel: 'Settings',
-    tabBarColor: '#009387',
-    tabBarIcon: ({ color }) => (
-      <Image style={styles.image} source={{
-        uri: 'https://logos.flamingtext.com/City-Logos/Todo-Logo.png',
-      }} />
-    ),
-  }}
-/>
-</Tab.Navigator>
-</NavigationContainer>
+      <Tab.Screen
+        name="HomeScreen"
+        component={HomeStackScreen}
+        options={{
+          title: 'Home',
+          tabBarLabel: 'Home',
+          tabBarColor: '#009387',
+          tabBarIcon: ({ color }) => (
+            <Image style={styles.image} source={{
+              uri: 'https://logos.flamingtext.com/City-Logos/Todo-Logo.png',
+            }} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="FavouriteScreen"
+        component={FavStackScreen}
+        options={{
+          tabBarLabel: 'Favourite',
+          tabBarColor: '#009387',
+          tabBarIcon: ({ color }) => (
+            <Image style={styles.image} source={{
+              uri: 'https://logos.flamingtext.com/City-Logos/Todo-Logo.png',
+            }} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="ProfileScreen"
+        component={ProfileStackScreen}
+        options={{
+          tabBarLabel: 'Profile',
+          tabBarColor: '#009387',
+          tabBarIcon: ({ color }) => (
+            <Image style={styles.image} source={{
+              uri: 'https://logos.flamingtext.com/City-Logos/Todo-Logo.png',
+            }} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="SettingsScreen"
+        component={SettingsStackScreen}
+        options={{
+          tabBarLabel: 'Settings',
+          tabBarColor: '#009387',
+          tabBarIcon: ({ color }) => (
+            <Image style={styles.image} source={{
+              uri: 'https://logos.flamingtext.com/City-Logos/Todo-Logo.png',
+            }} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
+  </NavigationContainer>
 );
 
 
 const HomeStackScreen = () => (
- <Stack.Navigator screenOptions = {{ 
-   headerStyle: {
-     backgroundColor: '#009387',
-   },
-   headerTintColor: '#fff',
-   headerTitleStyle: {
-     fontWeight: 'bold',
-   },
+  <Stack.Navigator screenOptions={{
+    headerStyle: {
+      backgroundColor: '#009387',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
   }}>
     <Stack.Screen name="Home" component={HomeScreen} />
   </Stack.Navigator>
 );
 
 const FavStackScreen = () => (
- <Stack.Navigator screenOptions = {{ 
-   headerStyle: {
-     backgroundColor: '#009387',
-   },
-   headerTintColor: '#fff',
-   headerTitleStyle: {
-     fontWeight: 'bold',
-   },
+  <Stack.Navigator screenOptions={{
+    headerStyle: {
+      backgroundColor: '#009387',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
   }}>
     <Stack.Screen name="Favourite" component={FavScreen} />
   </Stack.Navigator>
 );
 
 const ProfileStackScreen = () => (
- <Stack.Navigator screenOptions = {{ 
-   headerStyle: {
-     backgroundColor: '#009387',
-   },
-   headerTintColor: '#fff',
-   headerTitleStyle: {
-     fontWeight: 'bold',
-   },
+  <Stack.Navigator screenOptions={{
+    headerStyle: {
+      backgroundColor: '#009387',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
   }}>
     <Stack.Screen name="Profile" component={ProfileScreen} />
   </Stack.Navigator>
 );
 
 const SettingsStackScreen = () => (
- <Stack.Navigator screenOptions = {{ 
-   headerStyle: {
-     backgroundColor: '#009387',
-   },
-   headerTintColor: '#fff',
-   headerTitleStyle: {
-     fontWeight: 'bold',
-   },
+  <Stack.Navigator screenOptions={{
+    headerStyle: {
+      backgroundColor: '#009387',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
   }}>
     <Stack.Screen name="Settings" component={Settings} />
   </Stack.Navigator>
@@ -177,12 +177,12 @@ const SettingsStackScreen = () => (
 export default App;
 
 const styles = StyleSheet.create({
- image: {
-  flex: 1,
-  width: 30,
-  height: 30,
-  resizeMode: 'contain',
-},
+  image: {
+    flex: 1,
+    width: 30,
+    height: 30,
+    resizeMode: 'contain',
+  },
 });
 
 
