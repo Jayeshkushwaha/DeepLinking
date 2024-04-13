@@ -1,5 +1,7 @@
 # Deep Linking In React Native.
 
+## npx react-native@0.71.10 init DeepLinking --version 0.71.10
+
 ### Step 1. android/app/src/main/AndroidManifest.xml
 
 ```
