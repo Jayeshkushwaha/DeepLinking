@@ -11,9 +11,12 @@
 </intent-filter>
 ```
 
-### Step 2. App.tsx
+### Step 2. Add libraries
 
 yarn add @react-navigation/native react-native-screens react-native-safe-area-context @react-navigation/native-stack @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons @react-native-masked-view/masked-view
+
+### Step 3. App.tsx
+
 ```
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
@@ -195,7 +198,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-### Step 3. screens/HomeScreen.js
+### Step 4. screens/HomeScreen.js
 
 ```
 import React from 'react'
@@ -231,7 +234,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-### Step 4. screens/FavScreen.js
+### Step 5. screens/FavScreen.js
 
 ```
 import React from 'react'
@@ -269,7 +272,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-### Step 5. screens/ProfileScreen.js
+### Step 6. screens/ProfileScreen.js
 
 ```
 import React from 'react'
@@ -304,7 +307,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-### Step 6. screens/Settings.js
+### Step 7. screens/Settings.js
 
 ```
 import React from 'react'
