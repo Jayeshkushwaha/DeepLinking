@@ -34,10 +34,6 @@ import { Image, StyleSheet, ActivityIndicator } from 'react-native';
 const Tab = createMaterialBottomTabNavigator();
 
 const Stack = createNativeStackNavigator();
-const HomeStack = createNativeStackNavigator();
-const FavStack = createNativeStackNavigator();
-const ProfileStack = createNativeStackNavigator();
-const SettingsStack = createNativeStackNavigator();
 
 const linking = {
   prefixes: ['demoapp://'],
