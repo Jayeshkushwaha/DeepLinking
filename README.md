@@ -341,3 +341,9 @@ const styles = StyleSheet.create({
   }, 
 });
 ```
+
+//For Android
+adb shell am start -W -a android.intent.action.VIEW -d "demoapp://profilescreen/" com.rndeeplinkingproj      
+
+//For iOS
+xcrun simctl openurl booted "demoapp://profilescreen"
